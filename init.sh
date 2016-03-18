@@ -153,7 +153,7 @@ define( 'YOURLS_PRIVATE', true );
         '$YOURL_USER' => '$YOURL_PASSWORD',
         );
 define( 'YOURLS_DEBUG', false );
-define( 'YOURLS_URL_CONVERT', 36 );
+define( 'YOURLS_URL_CONVERT', '$YOURLS_URL_CONVERT' );
 \$yourls_reserved_URL = array(
         'reserved',
 );
@@ -178,7 +178,7 @@ define( 'YOURLS_PRIVATE', true );
         '$YOURL_USER' => '$YOURL_PASSWORD',
         );
 define( 'YOURLS_DEBUG', false );
-define( 'YOURLS_URL_CONVERT', 36 );
+define( 'YOURLS_URL_CONVERT', '$YOURLS_URL_CONVERT'  );
 \$yourls_reserved_URL = array(
         'reserved',
 );
