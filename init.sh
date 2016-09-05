@@ -86,7 +86,7 @@ if [ -e /$YOURLS_PATH$FILE ]; then
             /bin/sed -i "s@fastcgi_param HTTPS off@fastcgi_param HTTPS on@g" /etc/nginx/conf.d/default.conf
     fi
 
-    /bin/mkdir /data
+    /bin/mkdir -p /data
     /bin/chown -R nginx:nginx /data
 
     function fixperm {
@@ -109,6 +109,11 @@ define( 'YOURLS_DB_PASS', '$MYSQL_ENV_MYSQL_ROOT_PASSWORD' );
 define( 'YOURLS_DB_NAME', 'yourls' );
 define( 'YOURLS_DB_HOST', '$MYSQL_HOST' );
 define( 'YOURLS_DB_PREFIX', '$DB_PREFIX' );
+if('' == '$YOURLS_SITE') {
+  define('YOURLS_SITE', 'http://' . $_SERVER['HTTP_HOST'] . '');
+} else {
+  define( 'YOURLS_SITE', '$YOURLS_SITE' );
+}
 define( 'YOURLS_SITE', '$YOURLS_SITE' );
 define( 'YOURLS_HOURS_OFFSET', 0 );
 define( 'YOURLS_LANG', '' );
