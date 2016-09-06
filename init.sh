@@ -105,11 +105,10 @@ define( 'YOURLS_DB_NAME', 'yourls' );
 define( 'YOURLS_DB_HOST', '$MYSQL_HOST' );
 define( 'YOURLS_DB_PREFIX', '$DB_PREFIX' );
 if('' == '$YOURLS_SITE') {
-  define('YOURLS_SITE', 'http://' . $_SERVER['HTTP_HOST'] . '');
+  define( 'YOURLS_SITE', 'http://' . \$_SERVER['HTTP_HOST']);
 } else {
   define( 'YOURLS_SITE', '$YOURLS_SITE' );
 }
-define( 'YOURLS_SITE', '$YOURLS_SITE' );
 define( 'YOURLS_HOURS_OFFSET', 0 );
 define( 'YOURLS_LANG', '' );
 define( 'YOURLS_UNIQUE_URLS', true );
