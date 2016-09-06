@@ -23,12 +23,7 @@ if [ -e /$YOURLS_PATH$FILE ]; then
 
     fi
     
-    if [ -z "$YOURLS_SITE" ]; then
-            echo "no YOURLS_SITE name detected -> EXIT"
-            exit 1
-    else
-            echo "YOURLS_SITE name: $YOURLS_SITE"
-    fi
+    echo "YOURLS_SITE name: $YOURLS_SITE"
 
     if [ -z "$REDIRECT_MAIN_PAGE" ]; then
             /bin/sed -i "s/header/#header/g" /usr/share/nginx/yourls/index.php
